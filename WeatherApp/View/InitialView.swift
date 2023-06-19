@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct InitialView: View {
+    @StateObject var locationManager = LocationManager()
     var body: some View {
         ZStack {
             Image("black_clouds")
@@ -22,15 +24,15 @@ struct InitialView: View {
                     .cornerRadius(20)
                     .shadow(radius: 10)
                     .padding(20)
-              Label("**Weather App**", systemImage: "")
+                Label("**Weather App**", systemImage: "")
                     .labelStyle(.titleOnly)
                     .font(.system(size: 30))
                 Spacer()
                 Button {
-                    
+                    locationManager.requestLocation()
                 }label: {
                     Text("**Continue**")
-                    .frame(width: 250, height: 35)
+                        .frame(width: 250, height: 35)
                 }
                 .buttonStyle(.bordered)
                 .background(.white)
