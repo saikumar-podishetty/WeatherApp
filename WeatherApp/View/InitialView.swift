@@ -20,13 +20,15 @@ struct InitialView: View {
                 Image("Weather_Logo")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 250, height: 250)
+                    .frame(width: 200, height: 200)
                     .cornerRadius(20)
                     .shadow(radius: 10)
                     .padding(20)
                 Label("**Weather App**", systemImage: "")
                     .labelStyle(.titleOnly)
                     .font(.system(size: 30))
+                Spacer()
+                Spacer()
                 Spacer()
                 Button {
                     locationManager.requestLocation()
@@ -41,7 +43,6 @@ struct InitialView: View {
                 .font(.system(size: 24))
                 .shadow(radius: 10)
                 Spacer()
-                
             }
         }
     }
