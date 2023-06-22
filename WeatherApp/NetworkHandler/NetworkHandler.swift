@@ -1,5 +1,5 @@
 //
-//  ServiceRequestHandler.swift
+//  NetworkHandler.swift
 //  WeatherApp
 //
 //  Created by Sai Podishetty on 6/20/23.
@@ -7,19 +7,25 @@
 
 import Foundation
 
-class ServiceRequest {
+class NetworkRequest {
     //MARK: Function to handle URL Request
     fileprivate func apiRequest(baseUrl: URL, method: ApiRequestMethodType) -> URLRequest {
         var requestType = URLRequest(url: baseUrl)
         requestType.httpMethod = method.rawValue
-        requestType.addValue("application/json", forHTTPHeaderField: "Accept")
+        requestType.setValue("application/json", forHTTPHeaderField: "Accept")
+        requestType.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let headers = [
+            Service.xRapidAPIKey : Service.headerKey,
+            Service.xRapidAPIHost : Service.headerHost
+        ]
+        requestType.allHTTPHeaderFields = headers
         return requestType
     }
 }
 
- class ServiceCalling {
+ class NetworkHandler {
      //MARK: Function to handle API Request
-     func call<T: Decodable>(_ type:T.Type, serviceRequest: ServiceRequest,url: URL, method: ApiRequestMethodType, completionHandler: @escaping(Result<T,APIError>) -> Void){
+     func apiHandler<T: Codable>(_ type:T.Type, serviceRequest: NetworkRequest,url: URL, method: ApiRequestMethodType, completionHandler: @escaping(Result<T,APIError>) -> Void){
          //Calling service request
         let request = serviceRequest.apiRequest(baseUrl: url, method: method)
         let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in
