@@ -7,20 +7,13 @@
 
 import Foundation
 
-class CurrentLocationViewModel: ObservableObject {
+class CurrentLocationVM: ObservableObject {
     //MARK: Properties
     @Published var model: CurrentLocationModel?
     private let serviceRequest = NetworkHandler()
     private let request = NetworkRequest()
     
-    func currentLocationApiRequest() {
-        let params = [
-             "lat" : "37.81021",
-             "lon": "122.42282",
-             "timezone": "auto",
-             "language": "en",
-             "units": "auto"
-        ]
+    func currentLocationApiRequest(params:[String: Any]) {
         
         //Creating url components
         var components = URLComponents()

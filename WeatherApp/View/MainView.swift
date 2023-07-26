@@ -6,20 +6,32 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct MainView: View {
-    @StateObject var viewModel: CurrentLocationViewModel
+    @StateObject var viewModel = CurrentLocationVM()
+    @State var location = CLLocationCoordinate2D()
+    
     
     var body: some View {
-        Text("Hello, World!")
-            .onAppear{
-                viewModel.currentLocationApiRequest()
-            }
+        VStack {
+            Text("Hello, World!")
+        }
+        .onAppear{
+                let params: [String : Any] = [
+                    "lat" : location.latitude,
+                    "lon": location.longitude,
+                    "timezone": "auto",
+                    "language": "en",
+                    "units": "auto"
+                ]
+                viewModel.currentLocationApiRequest(params: params)
+        }
     }
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(viewModel: CurrentLocationViewModel())
+        MainView()
     }
 }

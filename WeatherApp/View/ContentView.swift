@@ -2,20 +2,20 @@
 //  ContentView.swift
 //  WeatherApp
 //
-//  Created by Sai Podishetty on 6/16/23.
+//  Created by Sai Podishetty on 6/23/23.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+//    @EnvironmentObject var locationManager: LocationManager
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+//        if locationManager.location == nil {
+//            InitialView()
+//        }else {
+//            MainView(viewModel: CurrentLocationViewModel())
+//        }
+        
     }
 }
 

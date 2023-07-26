@@ -49,7 +49,7 @@ struct Current: Codable {
 
 // MARK: - Precipitation
 struct Precipitation: Codable {
-    let total: Int
+    let total: Double
     let type: String
 }
 
