@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB078A8D2A4AFF60006438DA /* LocationTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB078A8C2A4AFF60006438DA /* LocationTrackView.swift */; };
 		BB9C6AB22A569EE7009A525F /* LoaderFiveLinesChronological.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9C6AB12A569EE7009A525F /* LoaderFiveLinesChronological.swift */; };
 		BB9C6ACE2A56A40C009A525F /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9C6ACD2A56A40C009A525F /* LoaderView.swift */; };
 		BBB2D4C72A4032AD000D2E46 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB2D4C62A4032AD000D2E46 /* InitialView.swift */; };
@@ -45,7 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BB078A8C2A4AFF60006438DA /* LocationTrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTrackView.swift; sourceTree = "<group>"; };
 		BB9C6AB12A569EE7009A525F /* LoaderFiveLinesChronological.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderFiveLinesChronological.swift; sourceTree = "<group>"; };
 		BB9C6ACD2A56A40C009A525F /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		BBB2D4C62A4032AD000D2E46 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 			children = (
 				BBB2D4C62A4032AD000D2E46 /* InitialView.swift */,
 				BBB2D4C82A405B43000D2E46 /* MainView.swift */,
-				BB078A8C2A4AFF60006438DA /* LocationTrackView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -372,7 +369,6 @@
 				BBB2D4D42A41C1B6000D2E46 /* EnumHandler.swift in Sources */,
 				BBCA6A102A3C7FFE00C55477 /* WeatherAppApp.swift in Sources */,
 				BB9C6AB22A569EE7009A525F /* LoaderFiveLinesChronological.swift in Sources */,
-				BB078A8D2A4AFF60006438DA /* LocationTrackView.swift in Sources */,
 				BBB2D4D12A41A991000D2E46 /* NetworkHandler.swift in Sources */,
 				BBB2D4DA2A42D6BA000D2E46 /* CurrentLocationViewModel.swift in Sources */,
 			);

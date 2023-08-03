@@ -33,30 +33,8 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         location = locations.first?.coordinate
-//        location.publisher.sink(receiveCompletion: { print("Longg in location:\($0)") }, receiveValue: { print("Longg Vaal in location:\($0)") })
-        
-//        location.publisher
-        // print("Location manager:Long:\(location?.longitude)---Lat:\(location?.latitude)")
     }
-    /*
-    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        switch manager.authorizationStatus {
-            
-        case .notDetermined:
-            <#code#>
-        case .restricted:
-            <#code#>
-        case .denied:
-            <#code#>
-        case .authorizedAlways:
-            <#code#>
-        case .authorizedWhenInUse:
-            <#code#>
-        @unknown default:
-            <#code#>
-        }
-    }
-    */
+    
     //MARK: LocationManagerDelegate - didFailWithError
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Location failed:\(error)")
