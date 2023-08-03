@@ -25,7 +25,6 @@ class CurrentLocationVM: ObservableObject {
         guard let url = components.url else {
             return
         }
-        
         serviceRequest.apiHandler(CurrentLocationModel.self, serviceRequest: request, url: url, method: .GET) { result in
             switch result {
             case .success(let data):

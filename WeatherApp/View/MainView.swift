@@ -21,11 +21,11 @@ struct MainView: View {
         }
         .onAppear{
                 let params: [String : Any] = [
-                    "lat" : location.latitude,
-                    "lon": location.longitude,
-                    "timezone": "auto",
-                    "language": "en",
-                    "units": "auto"
+                    Params.latitudeKey : location.latitude,
+                    Params.longitudeKey : location.longitude,
+                    Params.timeZoneKey : Params.timeZoneValue,
+                    Params.languageKey: Params.languageValue,
+                    Params.unitsKey: Params.unitsValue
                 ]
                 viewModel.currentLocationApiRequest(params: params)
         }
