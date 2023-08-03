@@ -15,7 +15,9 @@ struct MainView: View {
     
     var body: some View {
         VStack {
-            Text("Hello, World!")
+            if let temp = viewModel.model?.current.temperature {
+                Text("\(temp, specifier: "%.2f")")
+            }
         }
         .onAppear{
                 let params: [String : Any] = [

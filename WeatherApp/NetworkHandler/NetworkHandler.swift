@@ -47,3 +47,18 @@ class NetworkRequest {
         dataTask.resume()
     }
 }
+
+class NetworkResponse {
+    func apiResponse<T: Codable>(data: Data?, completionHandler: @escaping(Result<T,APIError>) -> Void) {
+        do {
+            guard let data = data else {
+                completionHandler(.failure(.parsingError))
+                return
+            }
+            let dataResponse = try JSONDecoder().decode(T.self, from: data)
+            completionHandler(.success(dataResponse))
+        }catch {
+            debugPrint("Error:\(error.localizedDescription)")
+        }
+    }
+}

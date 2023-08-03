@@ -30,6 +30,9 @@ class CurrentLocationVM: ObservableObject {
             switch result {
             case .success(let data):
                 print(data)
+                DispatchQueue.main.async {
+                    self.model = data
+                }
             case .failure(let error):
                 print(error)
             }
