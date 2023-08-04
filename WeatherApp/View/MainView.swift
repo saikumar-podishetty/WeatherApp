@@ -14,12 +14,12 @@ struct MainView: View {
     
     
     var body: some View {
-        VStack {
-            if let temp = viewModel.model?.current.temperature {
-                Text("\(temp, specifier: "%.2f")")
+            VStack {
+                if let temp = viewModel.model?.current.temperature {
+                    Text("\(temp, specifier: "%.2f")")
+                }
             }
-        }
-        .onAppear{
+            .onAppear{
                 let params: [String : Any] = [
                     Params.latitudeKey : location.latitude,
                     Params.longitudeKey : location.longitude,
@@ -32,8 +32,8 @@ struct MainView: View {
     }
 }
 
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-    }
-}
+//struct MainView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MainView()
+//    }
+//}

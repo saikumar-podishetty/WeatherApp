@@ -18,3 +18,12 @@ enum APIError: Error {
     case serverError
     case parsingError
 }
+
+//Handles element shapes
+enum Shapes {
+    case circle
+    case roundedRectangle
+    case rectangle
+    case capsule
+    case ellipse
+}
