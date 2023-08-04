@@ -37,14 +37,10 @@ struct InitialView: View {
                         showDetails = true
                     }label: {
                         Text("**Continue**")
-                            .frame(width: 250, height: 35)
                     }
-                    .buttonStyle(.bordered)
-                    .background(.white)
-                    .cornerRadius(20)
+                    .buttonStyle(NeumorphicButtonStyle(shapes: .constant(.roundedRectangle), width: .constant(250), height: .constant(55)))
                     .foregroundColor(Color.black.opacity(0.8))
                     .font(.system(size: 24))
-                    .shadow(radius: 10)
                     Spacer()
                 }
             }

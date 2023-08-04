@@ -11,14 +11,17 @@ struct TestView: View {
     
     var body: some View {
         ZStack {
+            Color.offWhite
             Button(action: {
                 print("Button tapped")
             }) {
-                Image(systemName: "heart.fill")
-                    .foregroundColor(.gray)
+                Image(systemName: "magnifyingglass")
+                    .foregroundColor(.black)
+                    
+                    
             }
-            .buttonStyle(NeumorphicButtonStyle(shapes: .constant(.circle)))
-            .frame(width: 100, height: 100)
+            .buttonStyle(NeumorphicButtonStyle(shapes: .constant(.circle), width: .constant(100), height: .constant(100)))
+            
                 
             
             

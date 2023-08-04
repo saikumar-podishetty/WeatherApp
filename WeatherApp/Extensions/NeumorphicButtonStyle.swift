@@ -12,6 +12,8 @@ import SwiftUI
 
 struct NeumorphicButtonStyle: ButtonStyle {
     @Binding var shapes: Shapes
+    @Binding var width: CGFloat
+    @Binding var height: CGFloat
     
     func makeBody(configuration: Self.Configuration) -> some View {
         
@@ -85,6 +87,7 @@ struct NeumorphicButtonStyle: ButtonStyle {
         
         Circle()
             .fill(Color.offWhite)
+            .frame(width: width, height: height)
     }
     
     @ViewBuilder
@@ -92,6 +95,7 @@ struct NeumorphicButtonStyle: ButtonStyle {
         
         Circle()
             .fill(Color.offWhite)
+            .frame(width: width, height: height)
             .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
             .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
     }
@@ -101,6 +105,7 @@ struct NeumorphicButtonStyle: ButtonStyle {
         
         Rectangle()
             .fill(Color.offWhite)
+            .frame(width: width, height: height)
     }
     
     @ViewBuilder
@@ -108,6 +113,7 @@ struct NeumorphicButtonStyle: ButtonStyle {
         
         Rectangle()
             .fill(Color.offWhite)
+            .frame(width: width, height: height)
             .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
             .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
     }
@@ -117,6 +123,7 @@ struct NeumorphicButtonStyle: ButtonStyle {
         
         RoundedRectangle(cornerRadius: 25,style: .continuous)
             .fill(Color.offWhite)
+            .frame(width: width, height: height)
     }
     
     @ViewBuilder
@@ -124,6 +131,7 @@ struct NeumorphicButtonStyle: ButtonStyle {
         
         RoundedRectangle(cornerRadius: 25,style: .continuous)
             .fill(Color.offWhite)
+            .frame(width: width, height: height)
             .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
             .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
     }
@@ -133,6 +141,7 @@ struct NeumorphicButtonStyle: ButtonStyle {
         
         Capsule()
             .fill(Color.offWhite)
+            .frame(width: width, height: height)
     }
     
     @ViewBuilder
@@ -140,6 +149,7 @@ struct NeumorphicButtonStyle: ButtonStyle {
         
         Capsule()
             .fill(Color.offWhite)
+            .frame(width: width, height: height)
             .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
             .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
     }
@@ -149,6 +159,7 @@ struct NeumorphicButtonStyle: ButtonStyle {
         
         Ellipse()
             .fill(Color.offWhite)
+            .frame(width: width, height: height)
     }
     
     @ViewBuilder
@@ -156,6 +167,7 @@ struct NeumorphicButtonStyle: ButtonStyle {
         
         Ellipse()
             .fill(Color.offWhite)
+            .frame(width: width, height: height)
             .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
             .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
     }
