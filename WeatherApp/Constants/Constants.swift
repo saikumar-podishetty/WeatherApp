@@ -9,15 +9,15 @@ import Foundation
 
 struct Service {
     static let scheme = "https"
-    static let host = "ai-weather-by-meteosource.p.rapidapi.com"
+    static let host = "api.weatherapi.com"
     static let xRapidAPIKey = "X-RapidAPI-Key"
     static let xRapidAPIHost = "X-RapidAPI-Host"
-    static let headerKey = "1f5fdffd8fmsh93e374279f85b0ap1a3686jsn50ffad5da1fb"
-    static let headerHost = "ai-weather-by-meteosource.p.rapidapi.com"
+    static let headerKey = "1b3d7d06171140b3844101349231109"
+    static let headerHost = "api.weatherapi.com"
 }
 
 struct EndPoints {
-    static let currentLocation = "/current"
+    static let currentLocation = "/v1/current.json"
     static let findPlaces = "/find_places"
     static let findPlacesPrefix = "/find_places_prefix"
     static let nearestPlace = "/nearest_place"
@@ -43,6 +43,8 @@ struct Params {
     static let timeZoneValue = "auto"
     static let languageKey = "language"
     static let languageValue = "en"
-    static let unitsKey = "units"
-    static let unitsValue = "auto"
+    static let key = "key"
+    static let q = "q"
+    static let aqi = "aqi"
+    static let aqiValue = "no"
 }

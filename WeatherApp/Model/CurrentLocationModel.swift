@@ -9,53 +9,50 @@ import Foundation
 
 // MARK: - CurrentLocationModel
 struct CurrentLocationModel: Codable {
-    let lat, lon: String
-    let elevation: Int
-    let timezone, units: String
     let current: Current
+    let location: Location
 }
 
 // MARK: - Current
 struct Current: Codable {
-    let icon: String
-    let iconNum: Int
-    let summary: String
-    let temperature, feelsLike: Double
-    let windChill: Double
-    let dewPoint: Double
-    let wind: Wind
-    let precipitation: Precipitation
-    let cloudCover: Int
-    let ozone: Double
-    let pressure: Int
-    let uvIndex: Double
+    let last_updated_epoch: Int
+    let last_updated: String
+    let temp_c: Double
+    let temp_f: Double
+    let is_day: Int
+    let condition: Condition
+    let wind_mph: Double
+    let wind_kph: Double
+    let wind_degree: Int
+    let wind_dir: String
+    let pressure_mb: Double
+    let pressure_in: Double
+    let precip_mm: Double
+    let precip_in: Double
     let humidity: Int
-    let visibility: Double
-
-    enum CodingKeys: String, CodingKey {
-        case icon
-        case iconNum = "icon_num"
-        case summary, temperature
-        case feelsLike = "feels_like"
-        case windChill = "wind_chill"
-        case dewPoint = "dew_point"
-        case wind, precipitation
-        case cloudCover = "cloud_cover"
-        case ozone, pressure
-        case uvIndex = "uv_index"
-        case humidity, visibility
-    }
+    let cloud: Int
+    let feelslike_c: Double
+    let feelslike_f: Double
+    let vis_km: Double
+    let vis_miles: Double
+    let uv: Double
+    let gust_mph: Double
+    let gust_kph: Double
 }
 
-// MARK: - Precipitation
-struct Precipitation: Codable {
-    let total: Double
-    let type: String
+struct Location: Codable {
+    let name: String
+    let region: String
+    let country: String
+    let lat: Double
+    let lon: Double
+    let tz_id: String
+    let localtime_epoch: Int
+    let localtime: String
 }
 
-// MARK: - Wind
-struct Wind: Codable {
-    let speed, gusts: Double
-    let angle: Int
-    let dir: String
+struct Condition: Codable {
+    let text: String
+    let icon: String
+    let code: Int
 }

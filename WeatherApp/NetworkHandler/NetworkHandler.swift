@@ -16,7 +16,7 @@ class NetworkRequest {
         requestType.setValue("application/json", forHTTPHeaderField: "Content-Type")
         let headers = [
             Service.xRapidAPIKey : Service.headerKey,
-            Service.xRapidAPIHost : Service.headerHost
+//            Service.xRapidAPIHost : Service.headerHost
         ]
         requestType.allHTTPHeaderFields = headers
         return requestType
